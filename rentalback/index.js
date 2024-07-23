@@ -8,7 +8,7 @@ const cors= require ("cors");
 require('./upload/images/list');
 require('./db/config');
 app.use(express.json());
-app.use(cors({ origin: ['http://localhost:3000', 'http://localhost:3001'] }));
+app.use(cors({ origin: ['http://localhost:3000', 'https://easydrivefront.onrender.com'] }));
 
 const User =require("./db/Users");
 const Product =require("./db/Products");
