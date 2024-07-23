@@ -40,6 +40,7 @@ const url="https://easydrive212003.vercel.app/";
   const fetchRentalList=async()=>{
     const response=await fetch('https://easydrive212003.vercel.app/api/Rental/products');
     const data=await response.json();
+    credentials: 'include'
     setRentalList(data)
   }
   useEffect(()=>{
@@ -49,6 +50,7 @@ const url="https://easydrive212003.vercel.app/";
   const fetchOwnerList=async()=>{
     const response=await fetch('https://easydrive212003.vercel.app/api/Rental/owners');
     const data=await response.json();
+    credentials: 'include'
     console.log("fetched owner",data);
     setOwners(data);
   }
