@@ -14,4 +14,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url = 'https://easydrive-ug3p.onrender.com'
+export const url = 'https://easydrivebackend.onrender.com'
