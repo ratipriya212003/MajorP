@@ -38,21 +38,40 @@ const url="https://easydrive212003.vercel.app/";
 
 
   const fetchRentalList=async()=>{
-    const response=await fetch('https://easydrive212003.vercel.app/api/Rental/products');
-    const data=await response.json();
-    credentials: 'include'
-    setRentalList(data)
+     try {
+      const response = await fetch('https://easydrive212003.vercel.app/api/Rental/products', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include', // Correct placement of credentials
+      });
+      const data = await response.json();
+      setRentalList(data);
+    } catch (error) {
+      console.error('Error fetching rental list:', error);
+    }
+  };
   }
   useEffect(()=>{
     fetchRentalList();
   },[])
   
   const fetchOwnerList=async()=>{
-    const response=await fetch('https://easydrive212003.vercel.app/api/Rental/owners');
-    const data=await response.json();
-    credentials: 'include'
-    console.log("fetched owner",data);
-    setOwners(data);
+     try {
+      const response = await fetch('https://easydrive212003.vercel.app/api/Rental/owners', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include', // Correct placement of credentials
+      });
+      const data = await response.json();
+      console.log("Fetched owner:", data);
+      setOwners(data);
+    } catch (error) {
+      console.error('Error fetching owner list:', error);
+    }
   }
 useEffect(()=>{
   fetchOwnerList();
