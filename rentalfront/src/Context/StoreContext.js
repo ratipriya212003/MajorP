@@ -38,7 +38,7 @@ const url="https://easydrivebackend.onrender.com";
 
 
   const fetchRentalList=async()=>{
-    const response=await fetch(`${url}/api/Rental/products`);
+    const response=await fetch('https://easydrivebackend.onrender.com/api/Rental/products');
     const data=await response.json();
     setRentalList(data)
   }
@@ -47,7 +47,7 @@ const url="https://easydrivebackend.onrender.com";
   },[])
   
   const fetchOwnerList=async()=>{
-    const response=await fetch(`${url}/api/Rental/owners`);
+    const response=await fetch('https://easydrivebackend.onrender.com/api/Rental/owners');
     const data=await response.json();
     console.log("fetched owner",data);
     setOwners(data);
