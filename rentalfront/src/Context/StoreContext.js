@@ -8,7 +8,7 @@ export function StoreContextProvider(props) {
   const [rental_list,setRentalList] =useState([]);
   const [owners,setOwners]=useState([]);
 
-const url="https://easydrive-ug3p.onrender.com";
+const url="https://easydrivebackend.onrender.com";
 
 
   const addToCart = (itemId) => {
