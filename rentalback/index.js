@@ -8,7 +8,12 @@ const cors= require ("cors");
 require('./upload/images/list');
 require('./db/config');
 app.use(express.json());
-app.use(cors({ origin: ['http://localhost:3000', 'https://easydrivefront.onrender.com'] }));
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://easydrivefront.onrender.com'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true // If using cookies or HTTP auth
+}));
 
 const User =require("./db/Users");
 const Product =require("./db/Products");
