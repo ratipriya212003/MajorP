@@ -19,7 +19,7 @@ const [message,setMessage]=useState("");
  const helpSubmit=async(e)=>{
  e.preventDefault();
 console.warn(name,phone,email,message);
-let response=await fetch(`${url}/submithelp`,{
+let response=await fetch('https://easydrivebackend.onrender.com/submithelp',{
     method:"POST",
     headers:{
         'Content-Type' :'application/json',
