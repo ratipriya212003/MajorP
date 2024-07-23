@@ -19,7 +19,7 @@ const [message,setMessage]=useState("");
  const helpSubmit=async(e)=>{
  e.preventDefault();
 console.warn(name,phone,email,message);
-let response=await fetch('https://easydrivebackend.onrender.com/submithelp',{
+let response=await fetch('https://easydrive212003.vercel.app/submithelp',{
     method:"POST",
     headers:{
         'Content-Type' :'application/json',
