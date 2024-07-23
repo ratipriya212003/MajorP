@@ -1,4 +1,4 @@
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 const express=require("express");
 const app=express();
 const jwt=require("jsonwebtoken");
@@ -216,7 +216,7 @@ app.get('/api/Rental/owners', async (req, res) => {
   }
 });
 
-app.listen(port,(error)=>{
+app.listen(PORT,(error)=>{
     if(!error){
         console.log("server is running on port"+port)
     }
