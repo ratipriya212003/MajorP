@@ -1,6 +1,7 @@
 import React, {  useState } from 'react'
 import "../styles/Login.css";
 import {useNavigate} from "react-router-dom";
+import { StoreContext } from '../Context/StoreContext';
 import crossIcon from "../assets/cross_icon.png";
 function Login({setShowLogin}) {
  
@@ -10,12 +11,13 @@ const [name,setName]=useState("");
 const [email,setEmail]=useState("");
 const [password,setPassword]=useState("");
 const navigate=useNavigate();
+ const {url} = useContext(StoreContext);
 
 
 const login=async(e)=>{
  e.preventDefault();
 console.log("email,password",email,password)
-let result= await fetch('http://localhost:5000/login',{
+let result= await fetch(`${url}/login`,{
   method:"Post",
   body:JSON.stringify({email,password}),
   headers:{
@@ -34,7 +36,7 @@ const signup=async(e)=>{
   e.preventDefault();
     console.log("signup function executed", name,email,password);
     let responseData=
-    await fetch('http://localhost:5000/register',{
+    await fetch(`${url}/register`,{
       method:"Post",
       headers:{
         'Content-Type' :'application/json',
