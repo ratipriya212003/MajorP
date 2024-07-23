@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import "../styles/Help.css"
+import {StoreContext} from '../Context/StoreContext';
 function Help() {
 const [showForm,setShowForm]=useState(false);
 
@@ -9,6 +10,7 @@ const [phone,setPhone]=useState("");
 const [email,setEmail]=useState("");
 const [message,setMessage]=useState("");
 
+    const {url} = useContext(StoreContext);
 
     const toggleForm = () => {
         setShowForm(!showForm);
@@ -17,7 +19,7 @@ const [message,setMessage]=useState("");
  const helpSubmit=async(e)=>{
  e.preventDefault();
 console.warn(name,phone,email,message);
-let response=await fetch('http://localhost:5000/submithelp',{
+let response=await fetch(`${url}/submithelp`,{
     method:"POST",
     headers:{
         'Content-Type' :'application/json',
