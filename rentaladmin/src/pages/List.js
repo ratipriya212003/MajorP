@@ -8,7 +8,7 @@ function List() {
   const [allproducts, setAllProducts] = useState([]);
 
   const fetchInfo = async() => {
-    let result= await fetch('http://localhost:5000/list');
+    let result= await fetch(`${url}/list`);
     result= await result.json();
     setAllProducts(result);
   };
@@ -18,7 +18,7 @@ function List() {
   }, [])
 
   const removeProduct = async (id) => {
-   let result= await fetch(`http://localhost:5000/list/${id}`, {
+   let result= await fetch(`${url}/list/${id}`, {
       method: "Delete",
     });
     result=await result.json()
