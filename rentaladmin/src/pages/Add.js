@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Add.css";
 import upload from "../assets/upload_area.png";
-
+import {url} from "../assets/assets";
 function Add() {
   const [image, setImage] = useState(null);
   const [name, setName] = useState("");
@@ -23,7 +23,7 @@ function Add() {
     formData.append('price',Number(price));
 
     try {
-      let responseData = await fetch("http://localhost:5000/addproduct", {
+      let responseData = await fetch(`${url}/addproduct`, {
         method: "POST",
         body: formData,
       });
