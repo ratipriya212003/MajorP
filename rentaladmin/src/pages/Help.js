@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import "../styles/Help.css";
 import Cross from "../assets/cross_icon.png";
+import {url} from "../assets/assets";
 function Help() {
 
   const [complaint,setComplaint]=useState([]);
@@ -8,7 +9,7 @@ function Help() {
   const fetchComplaint=async()=>{
 
     try{
-      let response=await fetch('http://localhost:5000/help');
+      let response=await fetch(`${url}/help`);
       response=await response.json();
       setComplaint(response)
     }
@@ -23,7 +24,7 @@ function Help() {
   },[]);
 
 async function removeComplaint(id){
-let result=await fetch(`http://localhost:5000/help/${id}`,{
+let result=await fetch(`${url}/help/${id}`,{
   method:"DELETE",
 });
 result=await result.json();
