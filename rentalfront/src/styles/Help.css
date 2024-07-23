@@ -1,0 +1,85 @@
+.helpBox {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  width: 600px;
+  margin-left: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 15px ; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.help h1{
+    color: #000000;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+  .help p{
+  max-width: 80%;
+  color: #7e7c7c;
+  }
+
+  
+  .helpBox button {
+    padding: 10px 20px;
+    background-color: rgb(246, 104, 79);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .helpBox button:hover {
+    background-color: #e89588;
+    
+  }
+  .contactForm{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    max-width: 25rem;
+  }
+
+  .name, .email,.phone, .msg{
+    font-size: medium;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(246, 104, 79);
+  }
+  
+  .submitBtn{
+    background-color: white;
+    padding:0.75rem 3.5rem ;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 2rem;
+  
+  }
+
+  @media only screen and (max-width: 768px) {
+    .helpBox {
+      width: 90%; 
+      margin: 20px auto; 
+      padding: 18px; 
+      align-items: center; 
+    }
+
+  
+    .helpBox button {
+      font-size: 0.9em; 
+      padding: 8px 16px; 
+    }
+  
+  }

@@ -1,0 +1,97 @@
+.listVehicle {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  width: 500px;
+  margin-left: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 15px ; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.notify_icon {
+  display: inline-block; 
+  margin-right: 20px; 
+  font-size: 2rem;
+  
+}
+
+.notification {
+  display: inline-block; 
+  font-size: 1.5em;
+  margin-bottom: -20px;  
+  color: #333;
+}
+
+.notify_heading h1 {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 10px; 
+}
+
+.notify_heading p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px; 
+}
+
+.notify_button button {
+  padding: 10px 20px;
+  background-color: rgb(246, 104, 79);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.notify_button button:hover {
+  background-color: #e89588;
+  
+}
+
+.listVehicles h1{
+  color: #000000;
+  font-weight: 500;
+  margin-top: 40px;
+}
+.listVehicles p{
+max-width: 80%;
+color: #7e7c7c;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .listVehicle {
+    width: 90%; 
+    margin: 20px auto; 
+    padding: 10px; 
+    align-items: center; 
+  }
+
+  .notify_icon {
+    margin-right: 10px; 
+  }
+
+  .notification {
+    font-size: 1.2em; 
+    margin-bottom: 0; 
+  }
+
+  .notify_heading h1 {
+    font-size: 1em; 
+
+  .notify_heading p {
+    font-size: 0.9em; 
+  }
+
+  .notify_button button {
+    font-size: 0.9em; 
+    padding: 8px 16px; 
+  }
+}
+}
