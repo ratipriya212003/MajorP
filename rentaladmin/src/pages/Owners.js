@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Owners.css";
+import {url} from "../assets/assets";
 import upload from "../assets/upload_area.png";
 
 function Owners() {
@@ -25,7 +26,7 @@ const formData = new FormData();
     formData.append('price',Number( price));
 try{
     //console.warn("ownername,ownermobile,category",ownerName,ownerMobile,category);
-let response= await fetch('http://localhost:5000/owners',{
+let response= await fetch(`${url}/owners`,{
     method:"POST",
     body:formData,
 })
