@@ -218,7 +218,7 @@ app.get('/api/Rental/owners', async (req, res) => {
 
 app.listen(PORT,(error)=>{
     if(!error){
-        console.log("server is running on port"+port)
+        console.log("server is running on port"+PORT)
     }
     else{
         console.log("error"+error);
