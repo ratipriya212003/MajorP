@@ -89,8 +89,6 @@ useEffect(()=>{
     url
   };
 
-
-
   return (
     <StoreContext.Provider value={contextValue}>
       {props.children}
