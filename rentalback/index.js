@@ -9,7 +9,7 @@ require('./upload/images/list');
 require('./db/config');
 app.use(express.json());
 app.use(cors({
-  origin: ['https://frontend212003.vercel.app'],
+  origin: ['https://frontend212003.vercel.app','http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true // If using cookies or HTTP auth
 }));
@@ -126,7 +126,7 @@ app.delete('/list/:id',async(req,res)=>{
 });
 
 // Example endpoint in Express
-app.get('/api/Rental/products', async (req, res) => {
+app.get('/api/Rental/products',cors(), async (req, res) => {
   try {
     const products = await Product.find(); // Example: Use Mongoose or your ORM to fetch products
     res.json(products);
@@ -210,7 +210,7 @@ catch(error){
 
 
 //ownerlist
-app.get('/api/Rental/owners', async (req, res) => {
+app.get('/api/Rental/owners',cors(), async (req, res) => {
   try {
     const owners = await Owner.find(); // Example: Use Mongoose or your ORM to fetch products
     res.json(owners);
