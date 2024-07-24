@@ -18,7 +18,7 @@ const navigate=useNavigate();
 const login=async(e)=>{
  e.preventDefault();
 console.log("email,password",email,password)
-let result= await fetch('https://easydrive212003.vercel.app/login',{
+let result= await fetch('https://backend-three-sable.vercel.app/login',{
   method:"Post",
   body:JSON.stringify({email,password}),
   headers:{
@@ -37,7 +37,7 @@ const signup=async(e)=>{
   e.preventDefault();
     console.log("signup function executed", name,email,password);
     let responseData=
-    await fetch('https://easydrive212003.vercel.app/register',{
+    await fetch('https://backend-three-sable.vercel.app/register',{
       method:"Post",
       headers:{
         'Content-Type' :'application/json',
