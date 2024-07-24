@@ -9,7 +9,7 @@ require('./upload/images/list');
 require('./db/config');
 app.use(express.json());
 app.use(cors({
-  origin: ['https://deploy-mern-1whq.vercel.app'],
+  origin: ['https://frontend212003.vercel.app/'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true // If using cookies or HTTP auth
 }));
