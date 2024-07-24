@@ -52,7 +52,7 @@ const url="https://easydrive212003.vercel.app/";
       console.error('Error fetching rental list:', error);
     }
   };
-  }
+  
   useEffect(()=>{
     fetchRentalList();
   },[])
