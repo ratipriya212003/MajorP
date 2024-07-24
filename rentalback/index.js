@@ -8,11 +8,13 @@ const cors= require ("cors");
 require('./upload/images/list');
 require('./db/config');
 app.use(express.json());
-app.use(cors({
-  origin: ['https://frontend212003.vercel.app','http://localhost:3000'],
+const corsConfig={
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true // If using cookies or HTTP auth
-}));
+};
+app.options("",cors(corsConfig));
+app.use(cors(corsConfig));
 
 const User =require("./db/Users");
 const Product =require("./db/Products");
