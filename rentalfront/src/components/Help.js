@@ -19,7 +19,7 @@ const [message,setMessage]=useState("");
  const helpSubmit=async(e)=>{
  e.preventDefault();
 console.warn(name,phone,email,message);
-let response=await fetch('https://backend-three-sable.vercel.app//submithelp',{
+let response=await fetch('https://backend-three-sable.vercel.app/submithelp',{
     method:"POST",
     headers:{
         'Content-Type' :'application/json',
