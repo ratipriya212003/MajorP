@@ -39,7 +39,7 @@ const url="https://backend-three-sable.vercel.app/";
 
   const fetchRentalList=async()=>{
      try {
-      const response = await fetch('https://backend-three-sable.vercel.app//api/Rental/products', {
+      const response = await fetch('https://backend-three-sable.vercel.app/api/Rental/products', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ const url="https://backend-three-sable.vercel.app/";
   
   const fetchOwnerList=async()=>{
      try {
-      const response = await fetch('https://backend-three-sable.vercel.app//api/Rental/owners', {
+      const response = await fetch('https://backend-three-sable.vercel.app/api/Rental/owners', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
