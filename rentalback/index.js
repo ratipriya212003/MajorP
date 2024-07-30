@@ -128,7 +128,7 @@ app.delete('/list/:id',async(req,res)=>{
 });
 
 // Example endpoint in Express
-app.get('/api/rental/products',cors(), async (req, res) => {
+app.get('/rental/products',cors(), async (req, res) => {
   try {
     const products = await Product.find(); // Example: Use Mongoose or your ORM to fetch products
     res.json(products);
@@ -212,7 +212,7 @@ catch(error){
 
 
 //ownerlist
-app.get('/api/rental/owners',cors(), async (req, res) => {
+app.get('/rental/owners',cors(), async (req, res) => {
   try {
     const owners = await Owner.find(); // Example: Use Mongoose or your ORM to fetch products
     res.json(owners);
