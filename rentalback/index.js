@@ -13,8 +13,8 @@ const corsConfig={
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true // If using cookies or HTTP auth
 };
-app.options("",cors(corsConfig));
-app.use(cors(corsConfig));
+// app.options("",cors(corsConfig));
+app.use(cors());
 
 const User =require("./db/Users");
 const Product =require("./db/Products");
@@ -128,7 +128,7 @@ app.delete('/list/:id',async(req,res)=>{
 });
 
 // Example endpoint in Express
-app.get('/api/Rental/products',cors(), async (req, res) => {
+app.get('/api/rental/products',cors(), async (req, res) => {
   try {
     const products = await Product.find(); // Example: Use Mongoose or your ORM to fetch products
     res.json(products);
@@ -212,7 +212,7 @@ catch(error){
 
 
 //ownerlist
-app.get('/api/Rental/owners',cors(), async (req, res) => {
+app.get('/api/rental/owners',cors(), async (req, res) => {
   try {
     const owners = await Owner.find(); // Example: Use Mongoose or your ORM to fetch products
     res.json(owners);
