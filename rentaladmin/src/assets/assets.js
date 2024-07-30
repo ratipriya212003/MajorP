@@ -14,4 +14,5 @@ export const assets ={
     parcel_icon
 }
 
-export const url = 'https://easydrivebackend.onrender.com'
+export const url = 'https://backend-three-sable.vercel.app'
+// export const url = 'http://localhost:5000'
